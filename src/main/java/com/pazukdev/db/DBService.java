@@ -26,12 +26,8 @@ import java.sql.SQLException;
 public class DBService {
 
     static Connection connection;
-
     //static final String URL="jdbc:mysql://" + "localhost:3306/mydbtest?useSSL=true&amp;autoReconnect=true&amp;serverTimezone=UTC";
-    static final String URL="jdbc:postgres://"
-            + "druuxeuwmnyzxn:83e5afb54a8e8c7387aaf8c3b9d99ad6643cbb83191be995d2a3357f4ca8b4ba@ec2-46-137-109-220."
-            + "eu-west-1.compute.amazonaws.com:5432/dfqrdiu6a3quhb"
-            + "?sslmode=require";
+    static final String URL="jdbc:postgresql://ec2-46-137-109-220.eu-west-1.compute.amazonaws.com:5432/dfqrdiu6a3quhb?sslmode=require";
     static final String USERNAME="druuxeuwmnyzxn";
     static final String PASSWORD="83e5afb54a8e8c7387aaf8c3b9d99ad6643cbb83191be995d2a3357f4ca8b4ba";
 
