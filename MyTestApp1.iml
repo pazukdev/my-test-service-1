@@ -6,7 +6,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
-          <factory-entry name="demo_hotels" value="d84b5f19-d75c-4e7a-911b-f20b46f0d0d5" />
+          <factory-entry name="dfqrdiu6a3quhb" value="d085ebb8-d9f1-4a97-890b-34ecb41218e0" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>

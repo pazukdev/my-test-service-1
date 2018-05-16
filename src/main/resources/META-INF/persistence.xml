@@ -5,14 +5,14 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:postgresql://ec2-46-137-109-220.eu-west-1.compute.amazonaws.com:5432/dfqrdiu6a3quhb?sslmode=require"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
             <property name="hibernate.connection.username" value="druuxeuwmnyzxn"/>
             <property name="hibernate.connection.password" value="83e5afb54a8e8c7387aaf8c3b9d99ad6643cbb83191be995d2a3357f4ca8b4ba"/>
             <property name="hibernate.archive.autodetection" value="class"/>
             <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.format_sql" value="false"/>
             <property name="hbm2ddl.auto" value="update"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect" />
         </properties>
     </persistence-unit>
 </persistence>
