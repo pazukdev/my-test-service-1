@@ -50,13 +50,14 @@ public class HotelForm extends FormLayout implements View {
         updateHotelList();
 
         addComponents(hotelToolbar, hotelMainLayout);
+        setMargin(false);
     }
 
 
     private void setGrid() {
         hotelGrid.setSelectionMode(Grid.SelectionMode.MULTI);
         hotelGrid.setWidth("1000px");
-        hotelGrid.setHeight("524px");
+        hotelGrid.setHeight("486px");
         hotelGrid.setBodyRowHeight(34);
         hotelGrid.getColumn("name").setMaximumWidth(260);
         hotelGrid.sort(hotelGrid.getColumn("name"), SortDirection.ASCENDING);

@@ -19,7 +19,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 
-public abstract class AbstractForm extends FormLayout {
+public abstract class AbstractForm extends VerticalLayout {
 
     protected Hotel hotel;
     protected Category category;

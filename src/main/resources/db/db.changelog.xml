@@ -23,7 +23,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="CATEGORY" type="VARCHAR(255)">
-				<constraints nullable="false" />
+				<constraints nullable="true" />
 			</column>
 			<column name="URL" type="VARCHAR(255)">
 				<constraints nullable="false" />
@@ -64,8 +64,11 @@
 		<modifyDataType tableName="HOTEL" columnName="CATEGORY"
 						newDataType="BIGINT" />
 		<addForeignKeyConstraint constraintName="HOTEL_CATEGORY"
-								 baseTableName="HOTEL" baseColumnNames="CATEGORY" referencedTableName="CATEGORY"
-								 referencedColumnNames="ID" onDelete="SET NULL" />
+								 baseTableName="HOTEL"
+								 baseColumnNames="CATEGORY"
+								 referencedTableName="CATEGORY"
+								 referencedColumnNames="ID"
+								 onDelete="SET NULL" />
 		<rollback>
 			<dropForeignKeyConstraint baseTableName="HOTEL"
 									  constraintName="HOTEL_CATEGORY" />

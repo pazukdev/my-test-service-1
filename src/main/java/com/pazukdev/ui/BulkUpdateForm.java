@@ -6,8 +6,6 @@ import com.vaadin.ui.*;
 
 public class BulkUpdateForm extends AbstractForm {
 
-    VerticalLayout verticalLayout = new VerticalLayout();
-
     private static PopupView instance;
 
 
@@ -18,9 +16,8 @@ public class BulkUpdateForm extends AbstractForm {
 
         Label label = new Label(hotelForm.bulkUpdate.getCaption());
 
-        verticalLayout.addComponents(label, fieldSelect, categorySelect, name, address, rating, url,
+        addComponents(label, fieldSelect, categorySelect, name, address, rating, url,
                 description, operatesFromDay, buttonBar);
-        addComponents(verticalLayout);
     }
 
 
@@ -28,6 +25,7 @@ public class BulkUpdateForm extends AbstractForm {
         BulkUpdateForm bulkUpdateForm = new BulkUpdateForm(hotelForm);
         instance =  new PopupView(null, bulkUpdateForm);
         instance.setHideOnMouseOut(false);
+        //instance.setWidth("400px");
         instance.addPopupVisibilityListener(event -> {
             bulkUpdateForm.resetForm();
         });

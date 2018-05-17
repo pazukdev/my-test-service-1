@@ -21,11 +21,15 @@ import java.util.List;
 
 public class HotelEditForm extends AbstractForm {
 
+    FormLayout formLayout = new FormLayout();
+
 
     public HotelEditForm(HotelForm hotelForm) {
         super(hotelForm);
-
-        addComponents(name, address, rating, operatesFromDay, categorySelect, description, url, buttonBar);
+        formLayout.addComponents(name, address, rating, operatesFromDay, categorySelect, description, url, buttonBar);
+        formLayout.setMargin(false);
+        addComponents(formLayout);
+        setMargin(false);
     }
 
 
