@@ -62,8 +62,8 @@ public class DemoService {
     private void executeTasks(String browser) throws InterruptedException {
         prepareBrowser(browser);
 
-        String baseUrl = "http://localhost:8080/vaadin-first-app-1.0-SNAPSHOT/#!Hotels";
-        //String baseUrl = "https://pazukdevtestapp1.herokuapp.com/#!Hotels";
+        //String baseUrl = "http://localhost:8080/vaadin-first-app-1.0-SNAPSHOT/#!Hotels";
+        String baseUrl = "https://pazukdevtestapp1.herokuapp.com/#!Hotels";
 
         driver.get(baseUrl); // launch browser and open address page
         driver.manage().window().maximize();
