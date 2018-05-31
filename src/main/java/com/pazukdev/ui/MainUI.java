@@ -89,6 +89,7 @@ public class MainUI extends UI {
 
 
     private void setButtons() {
+
         String buttonWidth = UIComponentsService.hotelFormButtonsWidth + "px";
 
         // Demo Play button
