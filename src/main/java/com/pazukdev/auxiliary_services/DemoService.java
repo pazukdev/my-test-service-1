@@ -142,7 +142,13 @@ public class DemoService {
     private void testAddCategoriesScenario() throws InterruptedException {
         System.out.println("Test add categories scenario started");
 
-        addCategory(3);
+        WebElement categoryMenu = driver.findElement(By.xpath(
+                "//span[@class='v-menubar-menuitem'][contains(././span/text(), 'Categories')]"));
+        categoryMenu.click();
+
+        Thread.sleep(4000);
+
+        addCategory(1);
 
         Thread.sleep(2000);
 
@@ -153,6 +159,12 @@ public class DemoService {
     // hotels add test
     private void testAddHotelsScenario(String browser) throws InterruptedException {
         System.out.println("Test add hotels scenario started");
+
+        WebElement hotelMenu = driver.findElement(By.xpath(
+                "//span[@class='v-menubar-menuitem'][contains(././span/text(), 'Hotels')]"));
+        hotelMenu.click();
+
+        Thread.sleep(6000);
 
         addHotel(4, browser);
 
