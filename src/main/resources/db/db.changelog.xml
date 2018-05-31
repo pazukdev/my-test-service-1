@@ -22,7 +22,7 @@
 			<column name="OPERATES_FROM" type="BIGINT">
 				<constraints nullable="false" />
 			</column>
-			<column name="CATEGORY" type="VARCHAR(255)">
+			<column name="CATEGORY" type="INT">
 				<constraints nullable="true" />
 			</column>
 			<column name="URL" type="VARCHAR(255)">
@@ -70,13 +70,22 @@
 								 referencedColumnNames="ID"
 								 onDelete="SET NULL" />
 		<rollback>
-			<dropForeignKeyConstraint baseTableName="HOTEL"
-									  constraintName="HOTEL_CATEGORY" />
+			<dropForeignKeyConstraint baseTableName="HOTEL" constraintName="HOTEL_CATEGORY" />
 			<dropIndex tableName="HOTEL" indexName="HOTEL_CATEGORY" />
-			<modifyDataType tableName="HOTEL" columnName="CATEGORY"
-							newDataType="VARCHAR(255)" />
-			<addNotNullConstraint tableName="HOTEL"
-								  columnName="CATEGORY" columnDataType="VARCHAR(255)" />
+			<modifyDataType tableName="HOTEL" columnName="CATEGORY" newDataType="INT" />
+			<addNotNullConstraint tableName="HOTEL" columnName="CATEGORY" columnDataType="INT" />
+		</rollback>
+	</changeSet>
+
+
+	<changeSet id="ADD_PAYMENT_COLUMN" author="sviarkaltsau">
+		<addColumn tableName="HOTEL">
+			<column name="PAYMENT" type="INT">
+				<constraints nullable="true" />
+			</column>
+		</addColumn>
+		<rollback>
+			<dropColumn tableName="HOTEL" columnName="PAYMENT" />
 		</rollback>
 	</changeSet>
 

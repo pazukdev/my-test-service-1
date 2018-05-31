@@ -15,7 +15,6 @@ public class BulkUpdateForm extends AbstractForm {
         selectField();
 
         Label label = new Label(hotelForm.bulkUpdate.getCaption());
-
         addComponents(label, fieldSelect, categorySelect, name, address, rating, url,
                 description, operatesFromDay, buttonBar);
     }
@@ -25,7 +24,6 @@ public class BulkUpdateForm extends AbstractForm {
         BulkUpdateForm bulkUpdateForm = new BulkUpdateForm(hotelForm);
         instance =  new PopupView(null, bulkUpdateForm);
         instance.setHideOnMouseOut(false);
-        //instance.setWidth("400px");
         instance.addPopupVisibilityListener(event -> {
             bulkUpdateForm.resetForm();
         });

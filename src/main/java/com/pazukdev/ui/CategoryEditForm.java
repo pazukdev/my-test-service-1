@@ -21,6 +21,7 @@ import java.util.List;
 
 public class CategoryEditForm extends AbstractForm {
 
+
     public CategoryEditForm(CategoryForm categoryForm) {
         super(categoryForm);
         addComponents(categoryName, buttonBar);
