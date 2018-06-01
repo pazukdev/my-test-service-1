@@ -66,7 +66,8 @@ public class DemoService {
         //String baseUrl = "https://pazukdevtestapp1.herokuapp.com/#!Hotels";
 
         //driver.get(baseUrl); // launch browser and open address page
-        driver.navigate().to("https://pazukdevtestapp1.herokuapp.com/#!Hotels");
+        //driver.navigate().to("https://pazukdevtestapp1.herokuapp.com/#!Hotels");
+        driver.navigate().to("https://pazukdevtestapp1.herokuapp.com");
         driver.manage().window().maximize();
 
         Thread.sleep(2000);
@@ -96,7 +97,7 @@ public class DemoService {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
-            driver = new ChromeDriver(options);
+            driver = new ChromeDriver();
         }
 
         if(browser.equals("FireFox")) {
