@@ -63,9 +63,10 @@ public class DemoService {
         prepareBrowser(browser);
 
         //String baseUrl = "http://localhost:8080/vaadin-first-app-1.0-SNAPSHOT/#!Hotels";
-        String baseUrl = "https://pazukdevtestapp1.herokuapp.com/#!Hotels";
+        //String baseUrl = "https://pazukdevtestapp1.herokuapp.com/#!Hotels";
 
-        driver.get(baseUrl); // launch browser and open address page
+        //driver.get(baseUrl); // launch browser and open address page
+        driver.navigate().to("https://pazukdevtestapp1.herokuapp.com/#!Hotels");
         driver.manage().window().maximize();
 
         Thread.sleep(2000);
@@ -93,7 +94,9 @@ public class DemoService {
         // get last version of required webdriver.exe with WebDriver Manager
         if(browser.equals("Chrome")) {
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            driver = new ChromeDriver(options);
         }
 
         if(browser.equals("FireFox")) {
@@ -353,6 +356,8 @@ public class DemoService {
                 Thread.sleep(2000);
 
                 radioButton.click();
+
+                Thread.sleep(2000);
 
                 WebElement paymentValueField = driver.findElement(By.id("paymentValueTextField"));
 
