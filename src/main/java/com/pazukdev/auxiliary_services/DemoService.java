@@ -14,8 +14,6 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.Select;
 import java.util.Random;
 
-// To run test run class
-// By default test adds 3 new hotel categories and 4 new hotels
 // To change number of new items edit invocation of addCategory(int quantityOfNewCategories)
 // and addHotel(int quantityOfNewHotels) methods (change arguments)
 
@@ -84,13 +82,12 @@ public class DemoService {
     }
 
     private void prepareBrowser(String browser) {
-        // get webdrivers with absolute path to webdriver.exe on local machine
-        // Mozilla FireFox
-        //System.setProperty("webdriver.firefox.marionette","C:\\geckodriver.exe");
-        //driver = new FirefoxDriver();
-        // Chrome
-        //System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-        //driver = new ChromeDriver();
+
+        // get webdriver from local machine (at root of disk C)
+        if(browser.equals("local")) {
+            System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+            driver = new ChromeDriver();
+        }
 
         // get last version of required webdriver.exe with WebDriver Manager
         if(browser.equals("Chrome")) {
